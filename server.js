@@ -20,10 +20,10 @@ app.get("/Home",(req,res) => {
     res.render("index.ejs")
 })
 app.get("/Guide",(req,res) => {
-    res.render("Guid.ejs")
+    res.render("guid.ejs")
 })
 app.get("/Tour",(req,res) => {
-    res.render("Tour.ejs")
+    res.render("tour.ejs")
 })
 app.get("/Hotels",(req,res) => {
     res.render("Hotels.ejs")
