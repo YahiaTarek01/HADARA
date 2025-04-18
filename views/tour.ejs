@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color:#002339;
+        display: grid;
+        overflow: hidden;
+        height: 100vh;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 40% 10% 10% 20%; 
+        gap: 10px;
+    }
+    .data .datas .rate .fa-star {
+        color: #002339;
+        padding-top: 10px;  
+    }
+    .Logo-title {
+        color: rgb(244,195,94);
+        font-size: 45px;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        letter-spacing: 5px;
+    }
+    #map {
+        width: 90%;
+        height: 100%;
+        background: rgb(244,195,94);
+        margin: auto;
+        border-radius: 10px; 
+    }
+    .req {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        background-color: rgb(244,195,94);
+        color: rgb(0, 22, 36);
+        font-weight: 750;
+        font-size: 22px;
+        font-family: tahoma;
+        letter-spacing: 3px;
+        border-radius: 15px;
+    }
+    .req:hover {
+        background: rgb(190, 147, 61);
+    }
+    .bar {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .bar button {
+        font-size: 18px;
+        background-color: transparent;
+        border-radius: 10px;
+        padding: 10px 20px;
+        border: 3px solid rgb(244,195,94);
+        font-weight: 700; 
+        transition: 0.3s;
+        color: rgb(244,195,94);
+    }
+    .bar .active { 
+        background-color: rgb(244,195,94);
+        color: rgb(0, 22, 36);
+    }
+    .bar button:hover {
+        background-color: rgb(244,195,94);
+        color: rgb(0, 22, 36);
+    } 
+    .data {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        background: rgb(238, 209, 152);
+        border-radius: 10px;
+        display: flex;
+    }
+    .data img {
+        height: 90%;
+        width: 25%;
+        margin: auto;
+    }
+    .data .datas {
+        width: 70%;
+        font-family: tahoma;
+        display: flex;
+        flex-direction: column;
+        align-items: start; 
+        padding-left: 10px;
+        padding-top: 10px; 
+    }
+    .data .datas h1{
+        color: rgb(0, 22, 36);
+    }
+    .data .datas hr {
+        width: 90%;
+        border-color: #002339;
+        margin: 10px 0;
+    }
+    .data .datas h4 {
+        color: rgb(0, 22, 36);
+    }
+    .fa-arrow-left {
+        color: rgb(244,195,94);
+        font-size: 25px;
+    }
+    .bo {
+        display: flex;
+        justify-content: space-around; 
+        align-items: center; 
+        width: 90%;
+        margin: auto; 
+    }
+</style>
+<body> 
+    <div class="bo">
+        <div class="uu"><i class="fa fa-arrow-left"></i></div>
+        <h1 class="Logo-title">HADARA</h1>
+    <i></i>
+    </div>
+    <div class="map" id="map"></div>
+    <button class="req">Request Ride</button>
+    <div class="bar">
+        <button class="standard active">Standard</button>
+        <button class="premium">Premium</button>
+        <button class="van">Van</button>
+    </div>
+    <div class="data">
+        <div class="datas">
+            <h1>210 L.E</h1>
+            <hr>
+            <h4>أ د ي 211</h4>
+            <div class="rate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+        </div>
+        <img src="./Screenshot 2025-04-18 002707.png" alt="">
+    </div>
+</body>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="./JS/all.js"></script>
+<script>
+    document.querySelector(".uu").onclick =() => {
+        location.href = "/home"
+    }
+        const map = L.map('map').setView([30.044, 31.2357], 13)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'OpenStreetMap'
+    }).addTo(map)
+    let marker
+    map.on('click',(e) => {
+        const {lat,lng} = e.latlng
+        if(marker) marker.setLatLng([lat,lng])
+        else marker = L.marker([lat,lng]).addTo(map)
+    })
+</script>
+</html>

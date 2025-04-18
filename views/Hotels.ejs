@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: rgb(244,195,94);
+
+    }
+    body {
+        background-color:rgb(0, 36, 62);
+        display: grid;
+        overflow: hidden;
+        height: 100vh;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 8% 8% 60% 8% ;
+        gap: 10px;
+    }
+    .Logo-title {
+        color: rgb(244,195,94);
+        font-size: 45px;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        letter-spacing: 5px;
+    }
+    .search-Bar {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: auto; 
+        border: 3px solid rgb(244,195,94); 
+        gap: 10px; 
+        border-radius: 15px; 
+        padding: 0px 15px;
+    } 
+    .search-Bar i {  
+        font-size: 40px;
+    }
+    .search-Bar input {
+        background-color: transparent;
+        border: none;
+        width: 90%;
+        height: 100%;
+        outline: none;
+        font-size: medium;
+
+    }
+    .search-Bar input::placeholder {
+        font-size: medium;
+        color: rgb(244,195,94);
+    }
+    .flters {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 7px; 
+    }
+    .flters .bar {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 20px;
+
+    }
+    .flters .bar button {
+        padding: 5px 20px;
+        border: none;
+        background-color: transparent;
+        font-size: medium; 
+        transition: 0.3s;
+        border-radius: 10px;
+    }
+    .flters .bar button:hover {
+        background-color: rgb(244,195,94);
+        color: rgb(0, 36, 62);
+        padding: 5px 10px;
+    }
+    .data {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll;
+        gap: 15px;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    .hotel {
+        width: 100%;
+        height: 30%;
+        border: 3px solid rgb(244,195,94);
+        border-radius: 10px;
+        padding:10px 10px;
+        display: flex;
+    }
+    .hotel img {
+        width: 32%;  
+              
+    }
+    .hotel .revs {
+        width: 68%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .hotel .revs button {
+        background-color: rgb(244,195,94);
+       color: rgb(0, 22, 36);
+       border: none;
+       font-weight: 795;
+       padding: 7px 20px;
+       border-radius: 10px; 
+       transition: 0.3s;
+    }
+    .hotel h3 {
+        color: white;
+    }
+    .hotel .revs button:hover {
+        background: rgb(175, 135, 56);
+    } 
+    .nav {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 3px solid rgb(244,195,94); 
+    }
+    .fa-arrow-left {
+        color: rgb(244,195,94);
+        font-size: 25px;
+    }
+    .bo {
+        display: flex;
+        justify-content: space-around; 
+        align-items: center; 
+        width: 90%;
+        margin: auto; 
+    }
+</style>
+<body>
+    <div class="bo">
+        <div class="uu"><i class="fa fa-arrow-left"></i></div>
+        <h1 class="Logo-title">HADARA</h1>
+        <i></i>
+        </div>    <div class="search-Bar">
+        <i class="fa fa-search"></i>
+        <input type="text" class="search" placeholder="Search City">
+    </div>
+    <div class="flters">
+        <h3>Filter By</h3>
+        <div class="bar">
+            <button class="btn1">Price</button>
+            <button class="btn2">Rating</button>
+            <button class="btn3">Distance</button>
+            <button class="btn4">Stars</button>
+        </div>
+    </div> 
+    <div class="data">
+        <div class="hotel">
+            <img src="./Screenshot.png" alt="">
+            <div class="revs">
+                <h2>Cleopatra Hotel</h2>
+                <h3>1530 L.E</h3>
+                <div class="rate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div class="hotel">
+            <img src="./Screenshot 2025-04-17 234750.png" alt="">
+            <div class="revs">
+                <h2>Sphinx Hotel</h2>
+                <h3>3100 L.E</h3>
+                <div class="rate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                <button>Book Now</button>
+            </div> 
+        </div>
+        <div class="hotel">
+            <img src="./Screenshot 2025-04-17 234600.png" alt="">
+            <div class="revs">
+                <h2>Osiris Hotel</h2>
+                <h3>1900 L.E</h3>
+                <div class="rate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div class="hotel">
+            <img src="./Screenshot 2025-04-17 234832.png" alt=""> 
+            <div class="revs">
+                <h2>Horus Hotel</h2>
+                <h3>2800 L.E</h3>
+                <div class="rate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                <button>Book Now</button>
+            </div>
+        </div>
+
+    </div> 
+    <div class="nav">
+        <i class="fa fa-car" style="font-size: 30px;"></i> 
+        <i style="font-size: 30px;" class="fa fa-bank"></i> 
+        <i class="fa fa-map-marker" style="font-size: 30px;"></i>
+    </div>
+</body>
+<script src="./JS/all.js"></script>
+<script>
+        document.querySelector(".uu").onclick =() => {
+        location.href = "/home"
+    }
+</script>
+</html>

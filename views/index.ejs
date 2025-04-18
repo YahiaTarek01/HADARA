@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color:#002339;
+        display: grid;
+        overflow: hidden;
+        height: 100vh;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 12% 15% 32% 22%;
+    }
+    .Logo-title {
+        color: rgb(244,195,94);
+        font-size: 45px;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        letter-spacing: 5px;
+    }
+    .header {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 100%;
+        padding: 0 5%;
+        align-items: center;
+        gap: 10px;
+    }
+    .header .search {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        justify-content: start;
+        background-color: rgb(244,195,94);
+        padding: 10px;
+        border-radius: 11px;
+        align-items: center;
+        color: #002339;
+        gap: 15px;
+    }
+    .header .search input {
+        background-color: transparent;
+        border: none;
+        height: 100%;
+        width: 95%;
+        outline: none;
+        font-weight: 650;
+        font-size: 16px;
+    }
+    .header .search input::placeholder {
+        color: #002339;
+        font-weight: 650;
+        font-size: 16px;
+    }
+    .header .logo {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header .logo img {
+        width: 90%;
+    }
+    .icon {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 2% 7%;
+        gap: 6%;
+    }
+    .icon div {
+        width: 100%;
+        height: 100%;
+        border: 3px solid rgb(244,195,94);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+    .icon div img {
+        width: 50%;
+    }
+    .data {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 50% 40%;
+        gap: 2%;
+        padding: 1% 2.5%;
+        justify-content: center;
+    }
+    .data div {
+        border-radius: 10px;
+    }
+    .data .map {
+        background-color: rgb(244,195,94);
+        width: 100%;
+        height: 100%;
+    }
+    .data .order {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 55% 45%;
+        gap: 5%;
+        padding: 4% 1%;
+        padding-top: 0;
+        padding-bottom: 6%;
+    }
+    .data .order .cout {
+        border:3px solid rgb(244,195,94);
+        color: rgb(244,195,94);
+        font-family: tahoma;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .data .order .cout .Submit {
+        background-color: rgb(244,195,94);
+        color: #002339;
+        border-radius: 10px;
+        font-weight: 700;
+        width: 70%;
+        border: none;
+        padding: 12px 10px;
+    }
+    .data .order .date {
+        background-color:rgb(244,195,94);
+        color: #002339;
+        font-family: tahoma;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .user {
+        background-color: rgb(234,196,126);
+        margin: auto;
+        width: 87%;
+        height: 100%;
+        border-radius: 10px;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .user img {
+        height: 100%;
+        width: 100%;
+        padding: 15px 24px;
+    }
+</style>
+<body>
+    <h1 class="Logo-title">HADARA</h1>
+    <div class="header">
+        <div class="search"><i class="fa fa-search"></i><input type="text" placeholder="Search Here"></div>
+        <div class="logo"><img src="./Screenshot 2025-04-16 110845.png" alt=""></div>
+    </div>
+    <div class="icon">
+        <div class="icon1"><img src="./1.png" alt=""></div>
+        <div class="icon2"><img src="./2.png" alt=""></div>
+        <div class="icon3"><img src="./3.png" alt=""></div>
+    </div>
+    <div class="data">
+        <div class="map" id="map"></div>
+        <div class="order">
+            <div class="cout">
+                <h2 class="count">1530 L.E</h2>
+                <button class="Submit">Confirm</button>
+            </div>
+            <div class="date">
+                <h3 class="day">Today</h3>
+                <h4 class="hour">11:00 PM</h4>
+            </div>
+        </div>
+    </div>
+    <div class="user">
+        <img src="./Screensho.png" alt="">
+    </div>
+</body>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="./JS/all.js"></script>
+<script>
+    document.querySelector(".icon1").onclick =() => {
+        location.href = "/guide"
+    }
+    document.querySelector(".icon2").onclick =() => {
+        location.href = "/hotels"
+    }
+    document.querySelector(".icon3").onclick =() => {
+        location.href = "/tour"
+    }
+    const map = L.map('map').setView([30.044, 31.2357], 13)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'OpenStreetMap'
+    }).addTo(map)
+    let marker
+    map.on('click',(e) => {
+        const {lat,lng} = e.latlng
+        if(marker) marker.setLatLng([lat,lng])
+        else marker = L.marker([lat,lng]).addTo(map)
+    })
+</script>
+</html>

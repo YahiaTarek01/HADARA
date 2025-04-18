@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: rgb(244,195,94);
+
+    }
+    body {
+        background-color:rgb(0, 22, 36);
+        display: grid;
+        overflow: hidden;
+        height: 100vh;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 8% 22% 30% 26% auto;
+    }
+    .titles {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .Logo-title {
+        color: rgb(244,195,94);
+        font-size: 26px;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        letter-spacing: 5px;
+        width: 80%;
+    }
+    .titles i {
+        font-size: 20px;
+        width: 10%;
+    }
+    hr {
+        width: 100%;
+        border-color: rgb(244,195,94);
+        margin-top: 0;
+    }
+    .user {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .user img {
+        width: 75%;
+        height: 100%;
+    }
+    .data {
+        width: 90%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 35% 50%; 
+        gap: 10px;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .data .infos1, .data .tours {
+        border: 2px solid rgb(244,195,94);
+        border-radius: 10px;
+        padding: 5px 10px;
+    }
+    .data .infos1 {
+        display: flex;
+    }
+    .data .infos1 .langs {
+        width: 75%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .data .infos1 .areas {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .data h5 {
+        color: white;
+    }
+    .data .tours {
+        display: flex;
+    }
+    .data .tours .dataTour {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    .data .tours .dataTourButton {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .data .tours .dataTourButton .button {
+       background-color: rgb(244,195,94);
+       color: rgb(0, 22, 36);
+       border: none;
+       font-weight: 795;
+       padding: 16px 40px;
+       border-radius: 10px;
+    }
+    .reviews {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+    }
+    .revs {
+        width: 100%;
+        height: 100%;
+        border: 2px solid rgb(244,195,94);
+        border-radius: 10px;
+    }
+    .rev {
+        padding: 8px 10px; 
+        display: flex;
+        flex-direction: column; 
+        gap: 5px;
+    }
+    .rev .data-rev {
+        display: flex;
+    justify-content: space-between;
+    }
+    .rev .data-rev h5 {
+        color: white;
+    }
+    .rev p {
+        color: white;
+    }
+    .book {
+        width: 90%;
+        height: 50%;
+        margin: auto;
+        margin-top: 40px;
+        background-color: rgb(244,195,94);
+        color: rgb(0, 22, 36);
+        font-weight: 750;
+        font-size: 19px;
+        font-family: tahoma;
+        letter-spacing: 3px;
+        border-radius: 10px;
+        border:none;
+    }
+    button:hover {
+        background: rgb(175, 135, 56);
+    }
+</style>
+<body>
+    <div class="titles">
+        <div class="uu"><i class="fa fa-arrow-left"></i></div>
+        <h4 class="Logo-title">GUIDE PROFILE</h4>
+        <i class="fa fa-heart"></i>
+        <hr>
+    </div>
+    <div class="user"><img src="./image.png" alt=""></div>
+    <div class="data">
+        <div class="infos1">
+            <div class="langs">
+                <h3 class="lang-tit">Languages</h3>
+                <h5>English - Arabic - French</h5>
+            </div>
+            <div class="areas">
+                <h3 class="areas.tit">Areas</h3>
+                <h5>Cairo - Giza</h5>
+            </div>
+        </div>
+        <div class="tours">
+            <div class="dataTour">
+                <h2>Tours</h2>
+                <h4>Pyramids Tour</h4>
+                <h5>3 Hours</h5>
+            </div>
+            <div class="dataTourButton">
+                <button class="button">Book Tour</button>
+            </div>
+        </div>
+    </div>
+    <div class="reviews">
+        <div class="title"><h2>reviews</h2></div>
+        <div class="revs">
+            <div class="rev">
+                <div class="data-rev">
+                    <h3 class="name">Sara</h3>
+                    <h5 class="date-rev">Apr 10 2024</h5>
+                    <div class="rate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                </div>
+                <p class="email">Very Nice Guide and friendly</p>
+                <hr>
+            </div>
+            <div class="rev">
+                <div class="data-rev">
+                    <h3 class="name">John</h3>
+                    <h5 class="date-rev">May 20 2024</h5>
+                    <div class="rate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                </div>
+                <p class="email">Great experience overall</p>
+                <hr>
+            </div>
+            <div class="rev">
+                <div class="data-rev">
+                    <h3 class="name">Peter</h3>
+                    <h5 class="date-rev">Mar 28 2025</h5>
+                    <div class="rate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                </div>
+                <p class="email">Very Professional</p>
+            </div>
+        </div>
+    </div>
+    <button class="book">Book Now</button>
+</body>
+<script src="./JS/all.js"></script>
+<script>
+        document.querySelector(".uu").onclick =() => {
+        location.href = "/home"
+    }
+</script>
+</html>

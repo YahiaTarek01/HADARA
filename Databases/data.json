@@ -1,0 +1,164 @@
+{
+    "Aqua": {
+        "Colors": [
+            "#ade3f5",
+            "#6d93ab",
+            "#3683e7"
+        ],
+        "Text": "#0663f9",
+        "Tags": []
+    },
+    "Cute": {
+        "Colors": [
+            "#f6d4f7",
+            "#e32b7b",
+            "#dc36e7"
+        ],
+        "Text": "#f500c0",
+        "Tags": []
+    },
+    "Volca": {
+        "Colors": [
+            "#f5b2b2",
+            "#ff2424",
+            "#d20404"
+        ],
+        "Text": "#f50000",
+        "Tags": []
+    },
+    "Livor": {
+        "Colors": [
+            "#d4f5b2",
+            "#2bc700",
+            "#206313"
+        ],
+        "Text": "#204805",
+        "Tags": []
+    },
+    "Roxez": {
+        "Colors": [
+            "#9562f3",
+            "#ab89fb",
+            "#190094"
+        ],
+        "Text": "#5836d3",
+        "Tags": []
+    },
+    "Tofy": {
+        "Colors": [
+            "#ffdbfa",
+            "#ff7adc",
+            "#f7e9f3"
+        ],
+        "Text": "#ff05a3",
+        "Tags": []
+    },
+    "Ben Ten": {
+        "Colors": [
+            "#ffffff",
+            "#348d1b",
+            "#000000"
+        ],
+        "Text": "#183019",
+        "Tags": []
+    },
+    "Sponge": {
+        "Colors": [
+            "#edf02d",
+            "#ebfd63",
+            "#e3f207"
+        ],
+        "Text": "#827b17",
+        "Tags": []
+    },
+    "Rongy": {
+        "Colors": [
+            "#ffb875",
+            "#ff7024",
+            "#d17000"
+        ],
+        "Text": "#b82e00",
+        "Tags": []
+    },
+    "Dark": {
+        "Colors": [
+            "#dedede",
+            "#383838",
+            "#000000"
+        ],
+        "Text": "#000000",
+        "Tags": []
+    },
+    "Olker": {
+        "Colors": [
+            "#8ab474",
+            "#376836",
+            "#91a98e"
+        ],
+        "Text": "#3a4e2d",
+        "Tags": []
+    },
+    "Forest": {
+        "Colors": [
+            "#4b814d",
+            "#205023",
+            "#3b8b1d"
+        ],
+        "Text": "#32680d",
+        "Tags": []
+    },
+    "Techno": {
+        "Colors": [
+            "#326ab3",
+            "#4265f0",
+            "#1243a5"
+        ],
+        "Text": "#6f8dd3",
+        "Tags": []
+    },
+    "Yollow": {
+        "Colors": [
+            "#feffa8",
+            "#fff457",
+            "#fcff33"
+        ],
+        "Text": "#dce925",
+        "Tags": []
+    },
+    "Hulk": {
+        "Colors": [
+            "#28f000",
+            "#37c011",
+            "#3f8731"
+        ],
+        "Text": "#67d548",
+        "Tags": []
+    },
+    "Fire": {
+        "Colors": [
+            "#f08166",
+            "#c02b11",
+            "#e46c44"
+        ],
+        "Text": "#bc0b0b",
+        "Tags": []
+    },
+    "UFO": {
+        "Colors": [
+            "#2a3c92",
+            "#1d33dd",
+            "#071478"
+        ],
+        "Text": "#091543",
+        "Tags": []
+    },
+    "Extra": {
+        "Colors": [
+            "#b76ee7",
+            "#8219c8",
+            "#dd13d6"
+        ],
+        "Text": "#430931",
+        "Tags": []
+    }
+}
